@@ -19,17 +19,19 @@ jobs:
       - name: Test with different seeds
         run: |
           echo "Testing with no seed.."
-          bun run random-generator.js
+          bun run random-number-generator.js
           echo ""
 
           echo "Testing with string seed.."
-          bun run random-generator.js "test-seed"
+          bun run random-number-generator.js "test-seed"
           echo ""
 
           echo "Testing with numeric seed.."
-          bun run random-generator.js 1906
+          bun run random-number-generator.js 1906
+
           echo "Generated report:"
           cat report.txt
+          
       - name: Upload artifacts
       - uses: actions/upload-artifact@v4
         with:
