@@ -32,9 +32,9 @@ jobs:
           cat report.txt
       - name: Upload artifacts
       - uses: actions/upload-artifact@v4
-        with :
-        name: test-report
-        path: report.txt
+        with:
+          name: test-report
+          path: report.txt
   build:
     name: Build Executables
     runs-on: ubuntu-latest
